@@ -1,0 +1,109 @@
+*, *:before, *:after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    background-color: rgb(10, 4, 26);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 100vh;
+    overflow-y: scroll;
+}
+
+.chat-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+/* --------- TEXT BUBBLE STYLES --------- */
+
+.chat-result {	
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    color: rgb(10, 4, 26);
+    background-color: rgb(226, 226, 226);
+    font-size: 1.4rem;
+    min-width: 3.6rem;
+    min-height: 3rem;
+    padding: .6rem 1rem;
+    margin-bottom: 1rem;
+    border-radius: 18px;
+}
+
+.chat-result-listener {
+    align-items: start;
+    margin-right: 2rem;
+}
+
+.chat-result-response {
+    align-items: end;
+    margin-left: 2rem;
+}
+
+
+.chat-result:before,
+.chat-result:after {
+	content: ' ';
+	position: absolute;
+	width: 0;
+	height: 0;
+}
+
+.chat-result-listener:before {
+	left: 20px;
+	bottom: -50px;
+}
+
+.chat-result-listener:after {
+	left: 20px;
+	bottom: -20px;
+	border: 10px solid;
+	border-color: rgb(226, 226, 226) transparent transparent rgb(226, 226, 226);
+}
+
+.chat-result-response:before {
+	right: 20px;
+	bottom: -50px;
+}
+
+.chat-result-response:after {
+	right: 20px;
+	bottom: -20px;
+	border: 10px solid;
+	border-color: rgb(226, 226, 226) rgb(226, 226, 226) transparent transparent;
+}
+
+
+button {
+    background-color: rgb(10, 4, 26);
+    color: rgb(226, 226, 226);
+    padding: .6rem 2rem;
+    font-size: 1.2rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin: .3rem auto 0;
+    min-width: 14rem;
+    border-radius: 15px;
+    border: 1px solid rgb(255, 255, 255);
+    cursor: pointer;
+}
+
+button:hover:enabled {
+    background-color: rgb(10, 4, 60);
+}
+
+button:disabled {
+    color: rgb(112, 112, 112);
+    border: 1px solid rgb(112, 112, 112);
+}
+
